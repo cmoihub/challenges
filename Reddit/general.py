@@ -65,4 +65,5 @@ def find_commmon_elements(array1, array2):
         if (candidate in array2) and (candidate not in common):
             common.append(candidate)
     print(common)
-find_commmon_elements([1,2,1], [3,2,1,5])
+# find_commmon_elements([1,2,1], [3,2,1,5])
+
