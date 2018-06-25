@@ -35,7 +35,7 @@ def fibonacci(n):
     print(fibonacci_dynamic(n))
 # fibonacci(0)
 
-def findSingleElement(array):
+def find_single_element(array):
     # Find the only element in an array that only occurs once.
     
     # 1. put items in separate arrays then check if any array have a size of 1
@@ -46,7 +46,7 @@ def findSingleElement(array):
     for x in range(0, len(array)):
         print(array[x])
     pass
-findSingleElement([1,2,2,3,3,5,5,5])
+# find_single_element([1,2,2,3,3,5,5,5])
 
 def multiply(i,j):
     # Write a multiply function that multiples 2 integers without using *
@@ -57,3 +57,12 @@ def multiply(i,j):
 def multiply_main(i,j):
     print(multiply(i,j))
 # multiply_main(5,2)
+
+def find_commmon_elements(array1, array2):
+    common = []
+    for i in range(0, len(array1)):
+        candidate = array1[i]
+        if (candidate in array2) and (candidate not in common):
+            common.append(candidate)
+    print(common)
+find_commmon_elements([1,2,1], [3,2,1,5])

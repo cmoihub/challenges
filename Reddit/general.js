@@ -58,7 +58,7 @@
         if(unique==1){
             console.log("unique element: " + uniqueElement)
         } else {
-            console.log("no unique elements found or multiple unique elements")
+            console.log("Failure: " + unique + " unique elements found")
         }
     }
 )([1,2,2,1]);
