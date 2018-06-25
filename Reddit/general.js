@@ -13,9 +13,55 @@
                 pairs[key] = 0;
             }
         }
-        console.log(pairs);
+
+        var values = Object.values(pairs)
+        var max = values.reduce(function(a,b){
+            return Math.max(a,b);
+        });
+        for(var key in pairs){
+            if (pairs[key] == max){
+                mostFrequentInteger = key;
+                console.log(mostFrequentInteger);
+            }
+        }
     }
-)([1, 2, 1, 4, 4, 4, 4, 4, 5, 3, 2, 3, 6, 1, 1, 1, 7, 7]);
+)([1, 2, 1, 4, 4, 4, 4, 4, 5, 3, 2, 3, 6, 1, 1, 81, 8, 1, 7, 7]);
+
+(
+    function findUniqueElement(array) {
+        let uniqueElement = 0;
+        let unique = 0;
+        /*
+        For every item in the array
+        Keep track of how many times they've occurred
+        */
+        var pairs = {};
+        for (var key of array) {
+            if (pairs.hasOwnProperty(key)) {
+                pairs[key] += 1;
+            } else {
+                pairs[key] = 0;
+            }
+        }
+        var values = Object.values(pairs)
+        var min = values.reduce(function(a,b){
+            return Math.min(a,b);
+        });
+        console.log(min)
+        console.log(pairs)
+        for(var key in pairs){
+            if (pairs[key] == min){
+                uniqueElement = key;
+                unique+=1;
+            }
+        }
+        if(unique==1){
+            console.log("unique element: " + uniqueElement)
+        } else {
+            console.log("no unique elements found or multiple unique elements")
+        }
+    }
+)([1,2,2,1]);
 
 (
     function findPairsEqualto10(array, pairs) {

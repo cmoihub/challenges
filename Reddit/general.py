@@ -1,20 +1,59 @@
 def fibonacci_recursive(n):
     if n is 0:
         return 0
-    elif n is 1 or n is 2:
+    if n <= 2:
         return 1
     return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
 def fibonacci_iterative(n):
-
-    return n
-
+    if n is 0:
+        return 0
+    i = 0
+    j = 1
+    k = 0
+    result = 0
+    while(k is not n-1):
+        k = k+1
+        result = i+j
+        i = j
+        j = result
+    return result
+def fibonacci_dynamic(n):
+    if n is 0:
+        return 0
+    else:
+        prev = 0
+        curr = 1
+        while (n > 1):
+            n = n-1
+            new = prev + curr
+            prev = curr
+            curr = new
+        return curr
 def fibonacci(n):
-    result0 = fibonacci_recursive(n)
-    result1 = fibonacci_iterative(n)
-    print(result0)
-    print(result1)
-fibonacci(7)
+    print(fibonacci_recursive(n))
+    print(fibonacci_iterative(n))
+    print(fibonacci_dynamic(n))
+# fibonacci(0)
+
+def findSingleElement(array):
+    # Find the only element in an array that only occurs once.
+    
+    # 1. put items in separate arrays then check if any array have a size of 1
+    # 2. use a dictionary to track how many times an item occurs in the array
+
+    uniques = []
+    keyvalue = {}
+    for x in range(0, len(array)):
+        print(array[x])
+    pass
+findSingleElement([1,2,2,3,3,5,5,5])
 
 def multiply(i,j):
+    # Write a multiply function that multiples 2 integers without using *
     if (i is 0) or (j is 0):
         return 0
+    return i + multiply(i, j-1)
+
+def multiply_main(i,j):
+    print(multiply(i,j))
+# multiply_main(5,2)
