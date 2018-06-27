@@ -35,11 +35,13 @@ Print a tree using BFS and DFS
 Write a function that determines if a tree is a BST
 Find the smallest element in a BST
 Find the 2nd largest number in a BST
-Given a binary tree which is a sum tree (child nodes add to parent), write an algorithm to determine whether the tree is a valid sum tree
+Given a binary tree which is a sum tree (child nodes add to parent), 
+write an algorithm to determine whether the tree is a valid sum tree
 Find the distance between 2 nodes in a BST and a normal binary tree
 Print the coordinates of every node in a binary tree, where root is 0,0
-Print a tree by levels
-Given a binary tree which is a sum tree, write an algorithm to determine whether the tree is a valid sum tree
+Print a tree by levels [distance from root]
+Given a binary tree which is a sum tree, 
+write an algorithm to determine whether the tree is a valid sum tree
 Given a tree, verify that it contains a subtree.
 HARD: Find the max distance between 2 nodes in a BST.
 HARD: Construct a BST given the pre-order and in-order traversal Strings
@@ -60,6 +62,7 @@ Check if a linked list has cycles
 Given a circular linked list, find the node at the beginning of the loop. Example: A-->B-->C --> D-->E -->C, C is the node that begins the loop
 Check whether a link list is a palindrome
 Reverse a linked list iteratively and recursively
+
 Sorting
 Implement bubble sort
 Implement selection sort
