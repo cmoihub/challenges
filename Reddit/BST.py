@@ -21,7 +21,7 @@ class Tree():
         else:
             print("root exists")
             node = Node(key)
-            self.insert_recursive(self.root, node, )
+            self.insert_recursive(self.root, node)
     def insert_recursive(self, root, node):
         if(root.key<node.key):
             print("going right")
@@ -41,7 +41,8 @@ class Tree():
                 self.insert_recursive(root.left, node)
         else:
             print("root has the key already")
-            pass
+    def delete(self):
+
         pass
 
 tree = Tree()
