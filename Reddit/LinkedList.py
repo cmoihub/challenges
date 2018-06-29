@@ -23,12 +23,10 @@ class LinkedList():
                 self.curr = self.traverse(index)
                 node.next = self.curr.next
                 self.curr.next = node
-    # def swap(self,new_node, old_node):
-
 
     def traverse(self, index):
         node = self.head
-        while node is not None and index is not 0:
+        while node.next is not None and index is not 0:
             index-=1
             node = node.next
         return node
@@ -48,5 +46,8 @@ list = LinkedList()
 list.insert(30)
 list.insert(20)
 list.insert(40,1)
+list.insert(50)
+list.insert(2,2)
+list.insert(60, 90)
+
 print(list)
-    
